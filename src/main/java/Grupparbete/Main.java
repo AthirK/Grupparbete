@@ -3,16 +3,16 @@ package Grupparbete;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
 
 
 
-public class Main {
+public class Main
+{
     private static Object Calculator;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //övning 1--------------------------------------------
         /*List<User> users = Arrays.asList(
                 new User("Kalle", "Kalle@gmail.com", 12, UserRole.ADMIN, true),
@@ -26,8 +26,9 @@ public class Main {
         List<UserDTO> result = userService.getActiveAdminUsers(users);
 
         System.out.println("Filtered Active Admin Users: " + result);*/
+
         //övning 3---------------------------------------------
-        try
+        /*try
         {
             Class<Calculator> Clazz = Calculator.class;
 
@@ -45,7 +46,15 @@ public class Main {
         catch (Exception e)
         {
             e.printStackTrace();
-        }
-        //----------------------------------------------------
+        }*/
+        //övning 2----------------------------------------------------
+        MyArray<String> list = new MyArray<>();
+        list.add("Athir");
+        list.add("Johan");
+        list.add("Simon");
+        list.add("Boban");
+
+        System.out.println("get Johan " + list.get(1));
+        //------------------------------------------------------------
     }
 }
