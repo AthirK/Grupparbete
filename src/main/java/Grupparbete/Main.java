@@ -1,15 +1,14 @@
 package Grupparbete;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.List;
 
-
-
-public class Main
-{
+public class Main {
     private static Object Calculator;
 
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class Main
 
         List<UserDTO> result = userService.getActiveAdminUsers(users);
 
-        System.out.println("Filtered Active Admin Users: " + result);*/
+        System.out.println("Filtered active Admin Users: " + result);*/
 
         //övning 3---------------------------------------------
         /*try
@@ -48,13 +47,17 @@ public class Main
             e.printStackTrace();
         }*/
         //övning 2----------------------------------------------------
-        MyArray<String> list = new MyArray<>();
+
+        /*MyArray<String> list = new MyArray<>();
         list.add("Athir");
         list.add("Johan");
         list.add("Simon");
         list.add("Boban");
 
-        System.out.println("get Johan " + list.get(1));
-        //------------------------------------------------------------
+        System.out.println("get Johan " + list.get(1));*/
+
+        //övning 4------------------------------------------------------------
+        /*MyAnimal myAnimal = new MyAnimal();
+        AutoCaller.callAnnotatedMethods(myAnimal);*/
     }
 }

@@ -1,5 +1,6 @@
 package Grupparbete;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +11,7 @@ public class UserService
         return users.stream()
                 .filter(user -> user.isActive() && user.getRole() == UserRole.ADMIN)
                 .map(this::convertToDTO)
-                .sorted((u1, u2) -> u1.getUsername().compareTo(u2.getUsername()))
+                .sorted(Comparator.comparing(UserDTO::getUsername))
                 .collect(Collectors.toList());
     }
 
