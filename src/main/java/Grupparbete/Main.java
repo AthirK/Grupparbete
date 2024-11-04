@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args)
     {
-
+        //övning 1--------------------------------------------
         List<User> users = Arrays.asList(
                 new User("Kalle", "Kalle@gmail.com", 12, UserRole.ADMIN, true),
                 new User("Karin", "Karin@gmail.com", 4, UserRole.EMPLOYEE, true),
@@ -18,5 +18,6 @@ public class Main {
         List<UserDTO> result = userService.getActiveAdminUsers(users);
 
         System.out.println("Filtered Active Admin Users: " + result);
+        //----------------------------------------------------
     }
 }
