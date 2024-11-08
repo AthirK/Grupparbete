@@ -59,5 +59,57 @@ public class Main {
         //övning 4------------------------------------------------------------
         /*MyAnimal myAnimal = new MyAnimal();
         AutoCaller.callAnnotatedMethods(myAnimal);*/
+
+
+        AmazingArray amazingArray = new AmazingArray();
+        Scanner scanner = new Scanner(System.in);
+        boolean run = true;
+
+        while (run) {
+            System.out.println();
+            System.out.println("*-*-*-* Menu: The Amazing Array *-*-*-*");
+            System.out.println("    1. Add element to array");
+            System.out.println("    2. Remove element at index");
+            System.out.println("    3. Get element at index");
+            System.out.println("    4. Clear array");
+            System.out.print("Choose an option: ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter element to add: ");
+                    int elementToAdd = scanner.nextInt();
+                    amazingArray.add(elementToAdd);
+                    System.out.println(elementToAdd + " added to array.");
+                    break;
+
+                case 2:
+                    System.out.print("Enter index to remove element from: ");
+                    int indexToRemove = scanner.nextInt();
+                    amazingArray.remove(indexToRemove);
+                    System.out.println("Element at index " + indexToRemove + " removed.");
+                    break;
+
+                case 3:
+                    System.out.print("Enter index to get its' element: ");
+                    int indexToGet = scanner.nextInt();
+                    try {
+                        int element = amazingArray.get(indexToGet);
+                        System.out.println("Element at index " + indexToGet + " is: " + element);
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+
+                case 4:
+                    amazingArray.clear();
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
+            }
+        } scanner.close();
     }
 }
